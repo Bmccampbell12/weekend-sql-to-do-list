@@ -10,18 +10,26 @@
 </head>
 <body>
   <header>
-<div class="container">
+
     <h1>Bruce's SQL TO-DO List</h1>
   </header>
- <!--This space will be where new To-do list items will appear-->
- <input type="text" id="new-todo" placeholder="Add a new task here...">
- <!--space where button "ADD" lives-->
- <button id="add-todo">Add</button>
+ 
+ <!--Container for the list of to-do items below here--->
+ <div class="container">
+  <!--Input field for new task/ To-Do item-->
+  <input type="text" data-testid="toDoTextInput" placeholder="Add New To-Do Task Here...">
 
- <!--Container for the list of to-do items below here-->
- <ul id="todo-list">
-  <!--To-do Items will be added here-->
-   </ul>
+  <button data-testid="submitButton">Add Task</button>
+
+ <!--space where "ADD" and "Delete" buttons live-->
+ <button data-testid="deleteButton">Delete Task</button>
+  
+ 
+ <li data-testid="">
+
+  <!--This space will be where new To-do list items will appear-->
+ 
+</li>
    </div>
  </body>
 </html>

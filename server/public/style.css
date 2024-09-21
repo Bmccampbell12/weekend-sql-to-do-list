@@ -1,0 +1,12 @@
+/*SQL Calculator Styling Page*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+max-width: 400px;
+margin: 0 auto;
+padding: 20px;
+background: #f7f7f7;
+
+}
