@@ -1,12 +1,34 @@
 /*SQL Calculator Styling Page*/
 body {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
 }
 
 .container {
-max-width: 400px;
+max-width: 500px;
 margin: 0 auto;
 padding: 20px;
 background: #f7f7f7;
+}
+h1 {
+    text-align: center;
+}
 
+input[type="text" ] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid;
+}
+button {
+    padding: 10px;
+    border: none;
+}
+ul li {
+    background: #cce5ff;
+    color: darkblue;
+    margin: 5px;
 }

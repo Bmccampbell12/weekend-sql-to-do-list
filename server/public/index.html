@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <script src="./scripts/axios.js"></script>
-  <script src="./scripts/client.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script defer type="text/javascript" src="scripts/client.js"></script>
   <title>Bruce's SQL TO-DO List</title>
 </head>
 <body>
@@ -13,21 +13,20 @@
 
     <h1>Bruce's SQL TO-DO List</h1>
   </header>
- 
+<main>
+  <section>
+    <h4>Add New To-Do Task</h4>
+    
+    
  <!--Container for the list of to-do items below here--->
- <div class="container">
+ <div class="wrapper" id="container">
   <!--Input field for new task/ To-Do item-->
-  <input type="text" data-testid="toDoTextInput" placeholder="Add New To-Do Task Here...">
-
-  <button data-testid="submitButton">Add Task</button>
-
- <!--space where "ADD" and "Delete" buttons live-->
- <button data-testid="deleteButton">Delete Task</button>
-  
- 
- <li data-testid="">
-
-  <!--This space will be where new To-do list items will appear-->
+  <input type="text" data-testid="toDoTextInput" placeholder="Add New Task Here...">
+<!--space where "ADD" button lives-->
+  <button data-testid="submitButton" type="button" onClick="submitButton(event)">Add Task</button>
+  <button data-testid="deleteButton" type="button" onClick="deleteButton(event)">Delete Task</button>   <!--space where "Delete" button lives-->
+  <ul id="toDoList" data-testid="toDoItem">
+    <!--This space will be where new To-do list items will appear--> 
  
 </li>
    </div>
