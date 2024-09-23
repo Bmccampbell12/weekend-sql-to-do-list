@@ -1,19 +1,29 @@
-const router = require('express').Router();
-const pool = require('../modules/pool');
+const router = require('express');
+const pool = require('../modules/pool.js');
 
-router.post('/', (req, res) => {
-    const newToDo = req.body;
+const router = express.Router();
 
-    const queryText = `INSERT INTO "todos" ("task", "isComplete") VALUES ($1, $2)`;
-pool.query(queryText, [newToDo.task, newToDo.isComplete])
+
+router.get('/', (req, res) => {
+    // const newToDo = req.body;
+
+   
+
+    const queryText = `SELECT * FROM "tasks" ORDER BY "isComplete";`;
+
+ pool.query(queryText) //[newToDo.task, newToDo.isComplete])
 .then(result => {
-    res.sendStatus(210);
+    res.send(result.rows);
 })
 .catch(err => {
-    console.log('Error completing POST task query', err);
+    console.log(err);
     res.sendStatus(500);
     });
 });
+router.put('/:id, (req, res) => {
+    console.log("req.params", req.params)
+};
+
 
 
 

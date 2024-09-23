@@ -35,7 +35,6 @@ function submitButton(event) {
         }
         //addToDo(toDoTextInput)
 
-
 let toDoToAdd = {
     task: toDoTextInput,
     isComplete: false
@@ -66,7 +65,7 @@ function startSqlToDoList() {
     axios({
         method: 'GET',
         url: '/todos',
-        // data: toDoTextInput,
+        data: toDoTextInput,
     }).then(function(response) {
         console.log('startSqlToDoList() response', response.data);
         renderToDo(response.data);
